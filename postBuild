@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "Running postBuild script..."
+
+# Download the RDF Delta distribution zip file
+wget https://repo1.maven.org/maven2/org/seaborne/rdf-delta/rdf-delta-dist/1.1.2/rdf-delta-dist-1.1.2.zip -O rdf-delta-dist-1.1.2.zip
+
+# Unzip the downloaded file
+unzip rdf-delta-dist-1.1.2.zip -d rdf-delta-dist
+
+# Optionally, clean up the zip file
+rm rdf-delta-dist-1.1.2.zip
+
+# Set DELTA_HOME environment variable
+export DELTA_HOME=/home/jovyan/rdf-delta-dist/rdf-delta-1.1.2
+
+# Make sure the extracted directory is in the PATH
+echo 'export PATH=$PATH:/home/jovyan/rdf-delta-dist/rdf-delta-1.1.2' >> ~/.bashrc
+echo 'export DELTA_HOME=/home/jovyan/rdf-delta-dist/rdf-delta-1.1.2' >> ~/.bashrc
+
+# Source the .bashrc to apply the changes
+source ~/.bashrc
