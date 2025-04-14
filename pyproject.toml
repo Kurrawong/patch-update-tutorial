@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "patch-update-tutorial"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["david <dcchabgood@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-rdflib = "^7.0.0"
-jupyter = "^1.0.0"
+rdflib = "^7.1.4"
+jupyter = "^1.1.1"
 
 
 [build-system]
